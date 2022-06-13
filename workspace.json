@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "super-duper-spruce": "apps/super-duper-spruce",
+    "super-duper-spruce-api": "apps/super-duper-spruce-api",
     "super-duper-spruce-e2e": "apps/super-duper-spruce-e2e"
   }
 }
