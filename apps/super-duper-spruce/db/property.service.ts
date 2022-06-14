@@ -39,7 +39,12 @@ const getProperties = async (filters?: PropertyFilters): Promise<{ data: Propert
     if (filters.goLiveDate) filtersList.push({type: PropertyFiltersType.goLiveDate, value: filters?.goLiveDate});
     if (filters.goLiveDateType) filtersList.push({type: PropertyFiltersType.goLiveDateType, value: filters?.goLiveDateType});
 
-    filterInput = filtersList.map(x => `${x.type}: ${x.value}`).join(', ');
+    filterInput = filtersList.map(x => {
+      if (typeof x.value === 'string' || x.value instanceof String)
+        return `${x.type}: "${x.value}"`;
+
+      return `${x.type}: ${x.value}`;
+    }).join(', ');
   }
 
   const {data: res} = await graphClient.query<{ getProperty: Property[] }>({

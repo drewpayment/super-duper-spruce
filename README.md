@@ -6,6 +6,10 @@
 
 Test API with NextJS frontend and Express GraphQL BFF API
 
+<a href="https://super-duper-spruce.herokuapp.com/" target="_blank">Super Duper Spruce DEMO</a>
+
+<a href="https://super-duper-spruce-api.herokuapp.com/graphql" target="_blank">GraphQL Playground</a>
+
 <p style="text-align: center"><img src="apps/super-duper-spruce/public/images/homepage.png" /></p>
 
 ## Properties
