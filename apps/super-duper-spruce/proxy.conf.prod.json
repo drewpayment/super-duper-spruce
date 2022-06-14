@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://super-duper-spruce-api.herokuapp.com/",
+    "secure": true
+  }
+}
