@@ -8,7 +8,8 @@
     "test": "nx test",
     "api:dev": "nx run super-duper-spruce-api:serve",
     "www:dev": "nx run super-duper-spruce:serve",
-    "dev": "yarn api:dev & yarn www:dev"
+    "dev": "yarn api:dev & yarn www:dev",
+    "heroku-postbuild": "nx build $PROJECT_NAME --prod"
   },
   "private": true,
   "dependencies": {
@@ -53,7 +54,7 @@
     "@types/express": "^4.17.13",
     "@types/jest": "27.4.1",
     "@types/node": "^17.0.42",
-    "@types/react": "18.0.12",
+    "@types/react": "^18.0.12",
     "@types/react-dom": "18.0.5",
     "@typescript-eslint/eslint-plugin": "~5.24.0",
     "@typescript-eslint/parser": "~5.24.0",
