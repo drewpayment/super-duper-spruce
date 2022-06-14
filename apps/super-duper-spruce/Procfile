@@ -1,1 +1,0 @@
-web: node dist/apps/super-duper-spruce/.next/serve/pages/_app.js
