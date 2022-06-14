@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run super-duper-spruce:serve:production -p $PORT",
+    "start": "yarn next start dist/apps/super-duper-spruce -p $PORT",
     "build": "nx build",
     "test": "nx test",
     "api:dev": "nx run super-duper-spruce-api:serve",
