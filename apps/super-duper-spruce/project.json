@@ -21,17 +21,18 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "super-duper-spruce:build",
-        "dev": true,
-        "proxyConfig": "apps/super-duper-spruce/proxy.conf.json"
+        "dev": true
       },
       "configurations": {
         "development": {
           "buildTarget": "super-duper-spruce:build:development",
-          "dev": true
+          "dev": true,
+          "proxyConfig": "apps/super-duper-spruce/proxy.conf.json"
         },
         "production": {
           "buildTarget": "super-duper-spruce:build:production",
-          "dev": false
+          "dev": false,
+          "proxyConfig": "apps/super-duper-spruce/proxy.conf.prod.json"
         }
       }
     },
