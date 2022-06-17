@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
 import { environment } from '../../environments/environment';
 import { MODERN_ENTITIES } from './entities';
-import { SetupTest } from '../../../tests/setup.spec';
+import { SetupTest } from '../../../tests/setup-test';
 
 const orm = new DataSource({
   type: 'postgres',

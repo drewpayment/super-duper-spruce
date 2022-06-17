@@ -1,4 +1,4 @@
-import { SetupTest } from '../../../tests/setup.spec';
+import { SetupTest } from '../../../tests/setup-test';
 import { DataSource } from 'typeorm';
 import { environment } from '../../environments/environment';
 import { LEGACY_ENTITIES } from './entities';

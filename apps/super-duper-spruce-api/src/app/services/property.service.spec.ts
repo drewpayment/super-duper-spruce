@@ -1,4 +1,4 @@
-import { SetupTest } from '../../../tests/setup.spec';
+import { SetupTest } from '../../../tests/setup-test';
 import PropertyService from './property.service';
 
 
@@ -16,7 +16,7 @@ describe('PropertyService tests', () => {
   test('Should get list of properties via TypeORM', async () => {
     const result = await PropertyService.getProperties({ legacyId: 5 })
 
-    expect(result).toBe([]);
+    expect(result).toEqual([]);
   })
 
 })

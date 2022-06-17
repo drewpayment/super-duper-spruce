@@ -1,5 +1,5 @@
 import { PropertyResolver } from '../src/app/graph/resolvers/property-resolver';
-import { SetupTest } from './setup.spec';
+import { SetupTest } from './setup-test';
 
 beforeAll(async () => {
   await SetupTest.instance.setupTestDbs();
