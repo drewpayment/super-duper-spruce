@@ -1,4 +1,6 @@
+import { SetupTest } from '../../../tests/setup.spec';
 import { DataSource } from 'typeorm';
+import { environment } from '../../environments/environment';
 import { LEGACY_ENTITIES } from './entities';
 
 const orm = new DataSource({
@@ -15,5 +17,6 @@ const orm = new DataSource({
 });
 
 export async function legacyDs() {
+  if (environment.testing) return await SetupTest.instance.legacyDs();
   return !orm.isInitialized ? await orm.initialize() : orm;
 }

@@ -40,3 +40,5 @@ Thumbs.db
 .env
 
 apps/super-duper-spruce-api/src/environments
+:memory-legacy:
+:memory-modern:

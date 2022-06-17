@@ -9,8 +9,11 @@ export default {
   },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]s$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/apps/super-duper-spruce-api',
+  setupFiles: [
+    './tests/jest.setup.ts',
+  ],
 };

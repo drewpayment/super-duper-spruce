@@ -1,5 +1,7 @@
 import { DataSource } from 'typeorm';
+import { environment } from '../../environments/environment';
 import { MODERN_ENTITIES } from './entities';
+import { SetupTest } from '../../../tests/setup.spec';
 
 const orm = new DataSource({
   type: 'postgres',
@@ -14,5 +16,7 @@ const orm = new DataSource({
 });
 
 export async function modernDs() {
+  const isTesting = environment.testing;
+  if (isTesting) return await SetupTest.instance.modernDs();
   return !orm.isInitialized ? await orm.initialize() : orm;
 }
